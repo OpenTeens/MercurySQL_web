@@ -1,367 +1,334 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MercurySQL - Official Site</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Hexo Homepage</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body, h1, h2, h3, p, a, button {
-            font-family: 'Poppins', sans-serif;
+        body {
+            background-color: #0a0a0a; /* Dark background for the body */
+            color: #d1d1d1; /* Light grey color for text for contrast */
+            font-family: Arial, sans-serif;
         }
 
-        /* Utility Classes */
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 15px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #5c4df1; /* Adjust the color to match the screenshot */
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s ease-in-out;
-        }
-        .btn:hover {
-            background: #443df5; /* Darker shade for hover effect */
-        }
-
-        /* Header Styles */
         header {
-            background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(147, 112, 219, 0.3) 100%);
-            padding: 20px 0;
-            border-bottom: none; 
-        }
-        header h1 {
-            color: #333;
-            font-weight: 700;
-            font-size: 2rem;
-        }
-        header nav ul {
-            list-style-type: none;
-        }
-        header nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-        header nav ul li a {
-            color: #333;
-            font-weight: 600;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: color 0.3s ease-in-out;
-        }
-        header nav ul li a:hover,
-        header nav ul li a:focus {
-            color: #5c4df1;
-        }
-        @keyframes backgroundShift {
-            0%, 100% {
-                background: linear-gradient(rgba(147, 112, 219, 0.5), rgba(147, 112, 219, 0.5)), url('/img/bg1.jpg') no-repeat center center/cover;
-            }
-            50% {
-                background: linear-gradient(rgba(147, 112, 219, 0.5), rgba(147, 112, 219, 0.5)), url('/img/bg2.jpg') no-repeat center center/cover;
-            }
+            background-color: #121212; /* Slightly lighter dark shade for the header */
         }
 
-        /* Hero Section Styles */
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 80vh; /* Adjust height as necessary */
-            padding: 40px 15px;
-            background: linear-gradient(135deg, #9575cd 0%, #7986cb 100%);
-            text-align: center;
-            background: lfinear-gradient(to bottom, rgba(147, 112, 219, 0.3), #9575cd), url('path-to-hero-background.jpg') no-repeat center center/cover;
-    /* ...other styles... */
-            animation: backgroundShift 10s infinite alternate ease-in-out;
-            /* Adjust the button styles to be centered */
-        }
-        .hero .btn {
-            font-size: 1.1rem;
-            padding: 15px 30px;
-            margin-top: 20px; /* Add some space above the button */
-        }
 
-        .hero-container {
-            flex-basis: 50%;
-        }
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .hero-btn {
-            font-size: 1.1rem;
-            padding: 15px 30px;
-        }
-        .hero-image {
-            flex-basis: 50%;
-            background: url('/path/to/your/image.jpg') no-repeat center center/cover;
-        }
-        .features {
-            padding: 60px 0;
-            background: #f7f7f7;
-        }
-        .features-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        .feature-item {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-        }
-        .feature-item:hover {
-            transform: translateY(-10px);
-        }
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .feature-title {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .feature-description {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        /* Newsletter Styles */
-        .newsletter {
-            background: #333;
-            color: #fff;
-            padding: 40px 0;
-        }
-        .newsletter-container {
+        .navbar {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-        }
-        .newsletter h3 {
-            font-size: 2rem;
-            margin-right: 20px;
-        }
-        .newsletter form {
-            display: flex;
-            align-items: center;
-        }
-        .newsletter input[type="email"] {
-            padding: 10px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-        .newsletter button {
             padding: 10px 20px;
-            font-size: 1rem;
-            background: #5c4df1;
-            color: #fff;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: #4b8eda; /* Technological blue for links */
+        }
+
+        .hero {
+            background-color: #1a1a1a; /* Dark background for the hero section */
+            color: #e4e4e4; /* Slightly whiter text within the hero for contrast */
+        }
+        .logo img {
+            height: 50px; /* Adjust as necessary */
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            transition: color 0.3s;
+        }
+
+        .navbar-links a:hover {
+            color: #007bff; /* Highlight color on hover */
+        }
+
+        .navbar-search {
+            display: flex;
+        }
+
+        .navbar-search input {
+            padding: 5px;
+            margin-right: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .navbar-search button {
+            padding: 5px 10px;
+            background-color: #007bff;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
+            color: white;
             cursor: pointer;
-        }
-        .newsletter button:hover {
-            background: #443df5;
+            outline: none;
         }
 
-        /* Footer Styles */
-        footer {
-            background: #292b2c;
-            color: #fff;
+        .navbar-search button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        .hero {
             text-align: center;
-            padding: 20px 0;
-        }
-        footer p {
-            margin: 0;
-            font-size: 1rem;
-        }
-        a, button {
-            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-        }
-        
-        a:hover, a:focus, button:hover, button:focus {
-            transform: scale(1.05);
-            background-color: #443df5;
-            color: #fff;
-            outline: none; /* Removes the outline on focus for buttons */
-        }
-        @media (max-width: 1200px) {
-            .features-container {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-        }
-        button:active {
-            transform: scale(0.98); /* Mimic a button press */
+            padding: 50px;
+            background-color: rgba(129, 40, 255, 0.5); 
         }
 
-        /* Accessibility Improvements */
-        a:focus, button:focus, input[type="email"]:focus {
-            box-shadow: 0 0 0 3px rgba(92,77,241,0.5); /* Adds a noticeable glow to focused elements */
+        .hero h1 {
+            color: #ffffff;
+            font-size: 2em;
         }
-        /* Responsive Design Adjustments */
-        @media (max-width: 992px) {
-            .hero {
+
+        .hero p {
+            color: #d6d6d6;
+            font-size: 1em;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            padding: 0;
+            background-color: #1a1a1a;
+        }
+
+        .card {
+            flex-basis: calc(33% - 40px); /* Subtracting the total margin from the width */
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Ensures nothing spills outside the border-radius */
+            transition: transform 0.2s ease-in-out;
+            background-color: #222; /* Even darker background for the cards themselves */
+            color: #ccc;
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* Slight lift effect on hover */
+        }
+
+        .card-image {
+            width: 100%;
+            height: auto;
+            display: block; /* Remove any space below the image */
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            margin: 10px 0;
+            color: #5bc0de;
+            font-size: 1.2em;
+        }
+
+        .card-description {
+            color: #666;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .card-link {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .card-link:hover {
+            background-color: #0056b3;
+        }
+
+        /* Add more styles as needed */
+        .site-footer {
+            background-color: #0d0d0d; 
+            color: white;
+            padding: 40px; /* Adjusted padding for overall footer */
+            font-size: 0.9em;
+        }
+
+        .footer-top {
+            background-color: #121212;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly; /* This will distribute space more evenly */
+            align-items: flex-start; /* Aligns items to the top */
+            max-width: 1200px; /* Adjust as needed to 'squeeze' content horizontally */
+            margin: 0 auto; /* Centers the footer container */
+        }
+
+        .footer-section {
+            padding: 0 20px; /* Added padding to each section for spacing */
+            margin-bottom: 20px;
+            flex: 1;
+            min-width: 200px; /* Adjust as needed to prevent columns from being too narrow */
+        }
+
+        .footer-section h4 {
+            margin-bottom: 20px;
+            color: #4b8eda;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px; /* Adjust the space between links */
+            transition: color 0.3s;
+        }
+
+        .footer-links li a:hover {
+            color: #007bff;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px; /* Adjust as needed for spacing between icons */
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #007bff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .footer-top {
                 flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                padding: 0 10px; /* Reduced padding for smaller screens */
                 text-align: center;
             }
-            .hero-container,
-            .hero-image {
-                flex-basis: 100%;
-            }
-            .features-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        @media (max-width: 768px) {
-            header nav ul {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #fff;
-                display: none; /* Hide by default */
-                flex-direction: column;
-                text-align: left;
-                box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            }
-
-            header nav ul.active { /* Class toggled on click */
-                display: flex;
-            }
-
-            header nav ul li {
-                width: 100%;
-                border-top: 1px solid #eaeaea;
-            }
-
-            header nav ul li a {
-                display: block;
-                padding: 15px;
-                border-bottom: 1px solid #eaeaea;
-            }
-
-            /* Hamburger Icon */
-            .menu-toggle {
-                display: block;
-                cursor: pointer;
-                font-size: 1.8rem;
-                margin-left: auto;
-            }
-
-            .menu-toggle.active {
-                color: #5c4df1;
-            }
-        }
-
-        /* Adding an overlay for mobile menu */
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 10;
-        }
-
-        .overlay.active {
-            display: block;
         }
     </style>
 </head>
 <body>
-    <div class="overlay"></div>
     <header>
-        <div class="container header-container">
-            <div id="branding">
-                <h1>MercurySQL</h1>
+        <nav class="navbar">
+            <div class="logo">
+                <!-- Replace with your logo image -->
+                <img src="/img/bg1.jpg" alt="Logo" />
             </div>
-            <nav>
-                <ul>
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li><a href="https://github.com/BernieHuang2008/MercurySQL">GitHub</a></li>
-                </ul>
-                <span class="menu-toggle">☰</span>
-            </nav>
-        </div>
+            <div class="navbar-links">
+                <a href="#">Home</a>
+                <!-- Add other links as necessary -->
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="navbar-search">
+                <input type="text" placeholder="Search" />
+                <button type="submit">🔍</button>
+            </div>
+        </nav>
     </header>
-
+    
     <main>
         <section class="hero">
-            <div class="container hero-container">
-                <h2>🚀 Simplify Your SQL with MercurySQL</h2>
-                <p>One library, endless possibilities. Get started with MercurySQL today!</p>
-                <a href="https://github.com/BernieHuang2008/MercurySQL" class="btn hero-btn">GitHub</a>
-            </div>
-            <div class="hero-image">
-                <!-- The image will be added via CSS -->
-            </div>
+            <h1>主题自由切换</h1>
+            <p>一个简洁、美观的主题</p>
+            <!-- Featured image and call-to-action buttons go here -->
         </section>
-
-        <section class="features">
-            <div class="container features-container">
-                <!-- Feature blocks will be added here -->
+        
+        <section class="cards">
+            <div class="card">
+                <img src="/img/bg1.jpg" alt="Card Image 1" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Card Title 1</h3>
+                    <p class="card-description">Description for card one. This is a brief introduction to the card's content.</p>
+                    <a href="#" class="card-link">Learn More</a>
+                </div>
             </div>
-        </section>
-
-        <section class="newsletter">
-            <div class="container newsletter-container">
-                <h3>Subscribe for Updates</h3>
-                <form>
-                    <input type="email" placeholder="Enter Email...">
-                    <button type="submit" class="btn">Subscribe</button>
-                </form>
+            
+            <div class="card">
+                <img src="/img/bg1.jpg" alt="Card Image 2" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Card Title 2</h3>
+                    <p class="card-description">Description for card two. This card contains different information or functionality.</p>
+                    <a href="#" class="card-link">Discover</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="/img/bg1.jpg" alt="Card Image 3" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Card Title 3</h3>
+                    <p class="card-description">Description for card three. It could have a call to action or further details.</p>
+                    <a href="#" class="card-link">Get Started</a>
+                </div>
             </div>
         </section>
     </main>
-    
-    <footer>
-        <div class="container footer-container">
-            <p>MercurySQL &copy; 2023</p>
+        <footer class="site-footer">
+            <div class="footer-top">
+                <div class="footer-section about-us">
+                    <h4>About Us</h4>
+                    <p>Information about the company or website. This is a place to add some brief text or company philosophy.</p>
+                </div>
+                <div class="footer-section quick-links">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact-us">
+                    <h4>Contact Us</h4>
+                    <p>123 Business Ave, City, State, Zip</p>
+                    <p>Email: contact@example.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div class="footer-section follow-us">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OpenTeens" class="social-icon">
+                            <i class="fab fa-github"></i>
+                            Github
+                        </a>
+                        <a href="https://twitter.com/openteens_org" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                            Twitter
+                        </a>
+                        <a href="https://www.instagram.com/openteens_community/" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 OpenTeens. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <div class="footer-bottom">
+            <p>&copy; OpenTeens. All Rights Reserved.</p>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var menuToggle = document.querySelector('.menu-toggle');
-            var nav = document.querySelector('header nav ul');
-            var overlay = document.querySelector('.overlay');
-
-            menuToggle.addEventListener('click', function() {
-                nav.classList.toggle('active');
-                overlay.classList.toggle('active');
-                this.classList.toggle('active');
-            });
-
-            overlay.addEventListener('click', function() {
-                nav.classList.remove('active');
-                this.classList.remove('active');
-                menuToggle.classList.remove('active');
-            });
-        });
-    </script>
 </body>
 </html>
-    
-

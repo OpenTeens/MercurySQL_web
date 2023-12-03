@@ -139,18 +139,21 @@
         .site-footer {
             background-color: #333;
             color: white;
-            padding: 40px 0;
+            padding: 40px; /* Adjusted padding for overall footer */
             font-size: 0.9em;
         }
 
         .footer-top {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            justify-content: space-evenly; /* This will distribute space more evenly */
+            align-items: flex-start; /* Aligns items to the top */
+            max-width: 1200px; /* Adjust as needed to 'squeeze' content horizontally */
+            margin: 0 auto; /* Centers the footer container */
         }
 
         .footer-section {
+            padding: 0 20px; /* Added padding to each section for spacing */
             margin-bottom: 20px;
             flex: 1;
             min-width: 200px; /* Adjust as needed to prevent columns from being too narrow */
@@ -201,7 +204,7 @@
             }
 
             .footer-section {
-                margin-bottom: 20px;
+                padding: 0 10px; /* Reduced padding for smaller screens */
                 text-align: center;
             }
         }

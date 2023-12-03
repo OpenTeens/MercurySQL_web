@@ -11,9 +11,13 @@
             color: #d1d1d1; /* Light grey color for text for contrast */
             font-family: Arial, sans-serif;
         }
+        .site-footer, .footer-top, .footer-section, .footer-bottom {
+            background: transparent; /* Make the background transparent to see the particles effect */
+            /* ... other styles ... */
+        }
 
         header {
-            background-color: rgba(255, 255, 255, 0.895); /* Slightly grey and transparent */
+            background-color: rgba(255, 255, 255, 0.85); /* Slightly grey and transparent */
             border-radius: 15px; /* Rounded corners */
             padding: 10px 20px; /* Adjust as needed */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow for depth */
@@ -28,6 +32,7 @@
             border-radius: 15px 15px 0 0; /* Rounded corners at the top */
             background-color:transparent;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 10;
         }
 
         .navbar a {
@@ -39,7 +44,7 @@
         }
 
         .hero {
-            background: url('/img/bg1.jpg') no-repeat center center;
+            border-radius: 15px;
             background-size: cover;
             padding: 50px 0; /* Adjust padding as needed */
             position: relative;
@@ -101,7 +106,9 @@
         }
 
         .hero {
-            background: url('/img/bg1.jpg') no-repeat center center;
+            background-color: rgba(52, 52, 52, 0.195);
+            border-radius: 15px;
+            backdrop-filter: blur(1px); 
             background-size: cover;
             color: #e4e4e4; /* Adjust text color if needed */
             padding: 50px 0; /* Adjust padding as needed */
@@ -138,7 +145,7 @@
             justify-content: space-between;
             margin: 20px;
             padding: 0;
-            background-color: #1a1a1a;
+            background-color: transparent;
         }
 
         .card {
@@ -148,7 +155,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden; /* Ensures nothing spills outside the border-radius */
             transition: transform 0.2s ease-in-out;
-            background-color: #222; /* Even darker background for the cards themselves */
+            background-color: #2222222d; /* Even darker background for the cards themselves */
+            backdrop-filter: blur(1px); 
             color: #ccc;
         }
 
@@ -194,7 +202,7 @@
 
         /* Add more styles as needed */
         .site-footer {
-            background-color: #0d0d0d; 
+            background-color: transparent; 
             color: white;
             padding: 40px; /* Adjusted padding for overall footer */
             font-size: 0.9em;
@@ -255,6 +263,15 @@
             text-align: center;
             padding-top: 20px;
         }
+        #particles-js {
+            position: fixed; /* Use fixed instead of absolute to cover the entire page */
+            width: 100%;
+            height: 100%;
+            background-color: #0a0a0a; /* This will be covered by particles, but it's good to have a fallback */
+            top: 0;
+            left: 0;
+            z-index: -1; /* Behind everything else */
+        }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
@@ -271,6 +288,7 @@
     </style>
 </head>
 <body>
+    <div id="particles-js"></div>
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -371,5 +389,11 @@
             </div>
         </footer>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particlesjs-config.json', function() {
+            console.log('particles.js loaded - callback');
+        });
+    </script>
 </body>
 </html>

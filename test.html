@@ -140,18 +140,20 @@
             background-color: #333;
             color: white;
             padding: 40px 0;
+            font-size: 0.9em;
         }
 
-        .footer-content {
+        .footer-top {
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            justify-content: space-between;
             margin-bottom: 20px;
-            flex-wrap: wrap; /* Ensure it works on smaller screens */
         }
 
         .footer-section {
-            flex-basis: 25%;
-            padding: 0 15px;
+            margin-bottom: 20px;
+            flex: 1;
+            min-width: 200px; /* Adjust as needed to prevent columns from being too narrow */
         }
 
         .footer-section h4 {
@@ -166,66 +168,44 @@
         .footer-links li a {
             color: white;
             text-decoration: none;
-            margin-bottom: 10px;
             display: block;
+            margin-bottom: 10px; /* Adjust the space between links */
             transition: color 0.3s;
         }
 
         .footer-links li a:hover {
-            color: #007bff; /* Highlight color on hover */
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            padding: 0;
+            color: #007bff;
         }
 
         .social-links a {
-            display: flex;
-            align-items: center;
+            display: inline-block;
+            margin-right: 15px; /* Adjust as needed for spacing between icons */
             color: white;
-            margin-right: 15px;
             text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .social-links a:last-child {
-            margin-right: 0;
-        }
-
-        .social-links svg {
-            height: 24px;
-            width: auto;
-            margin-right: 8px;
-            fill: currentColor; /* SVG color will be the same as the text color */
         }
 
         .social-links a:hover {
-            color: #007bff; /* Change icon color on hover */
+            color: #007bff;
         }
 
         .footer-bottom {
             text-align: center;
-            padding-top: 10px;
-        }
-
-        .footer-bottom p {
-            margin: 0;
+            padding-top: 20px;
         }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            .footer-content {
+            .footer-top {
                 flex-direction: column;
                 align-items: center;
             }
 
             .footer-section {
                 margin-bottom: 20px;
+                text-align: center;
             }
         }
-            </style>
+    </style>
 </head>
 <body>
     <header>
@@ -284,46 +264,49 @@
             </div>
         </section>
     </main>
-    
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About Us</h4>
-                <p>Information about the company or website. This is a place to add some brief text or company philosophy.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contact Us</h4>
-                <p>123 Business Ave, City, State, Zip</p>
-                <p>Email: contact@example.com</p>
-                <p>Phone: (123) 456-7890</p>
-            </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <div class="social-links">
-                    <a href="https://github.com/OpenTeens" class="social-icon">
-                        <i class="fab fa-github"></i>
-                        Github
-                    </a>
-                    <a href="https://twitter.com/openteens_org" class="social-icon">
-                        <i class="fab fa-twitter"></i>
-                        Twitter
-                    </a>
-                    <a href="https://www.instagram.com/openteens_community/" class="social-icon">
-                        <i class="fab fa-instagram"></i>
-                        Instagram
-                    </a>
+        <footer class="site-footer">
+            <div class="footer-top">
+                <div class="footer-section about-us">
+                    <h4>About Us</h4>
+                    <p>Information about the company or website. This is a place to add some brief text or company philosophy.</p>
+                </div>
+                <div class="footer-section quick-links">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact-us">
+                    <h4>Contact Us</h4>
+                    <p>123 Business Ave, City, State, Zip</p>
+                    <p>Email: contact@example.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div class="footer-section follow-us">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/OpenTeens" class="social-icon">
+                            <i class="fab fa-github"></i>
+                            Github
+                        </a>
+                        <a href="https://twitter.com/openteens_org" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                            Twitter
+                        </a>
+                        <a href="https://www.instagram.com/openteens_community/" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                            Instagram
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 OpenTeens. All Rights Reserved.</p>
+            </div>
+        </footer>
         <div class="footer-bottom">
             <p>&copy; OpenTeens. All Rights Reserved.</p>
         </div>

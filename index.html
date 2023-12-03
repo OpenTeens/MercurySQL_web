@@ -13,27 +13,51 @@
         }
 
         header {
-            background-color: #121212; /* Slightly lighter dark shade for the header */
+            background-color: rgba(255, 255, 255, 0.895); /* Slightly grey and transparent */
+            border-radius: 15px; /* Rounded corners */
+            padding: 10px 20px; /* Adjust as needed */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow for depth */
+            margin: 20px;
         }
-
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            background-color: #fff;
+            border-radius: 15px 15px 0 0; /* Rounded corners at the top */
+            background-color:transparent;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .navbar a {
             color: #4b8eda; /* Technological blue for links */
+            width: calc(100% - 40px); /* Adjust the width as needed */
+            margin: 0 auto;
+            padding: 10px 15px; /* Spacing around the links */
+            border-radius: 5px; 
         }
 
         .hero {
-            background-color: #1a1a1a; /* Dark background for the hero section */
+            background: url('/img/bg1.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 50px 0; /* Adjust padding as needed */
+            position: relative;
             color: #e4e4e4; /* Slightly whiter text within the hero for contrast */
         }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50px; /* Pull the pseudo-element up to under the navbar */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            filter: blur(5px); /* Apply the blur directly to the image */
+            z-index: -1;
+        }
+
         .logo img {
             height: 50px; /* Adjust as necessary */
         }
@@ -74,10 +98,28 @@
         .navbar-search button:hover {
             background-color: #0056b3; /* Darker blue on hover */
         }
+
         .hero {
+            background: url('/img/bg1.jpg') no-repeat center center;
+            background-size: cover;
+            color: #e4e4e4; /* Adjust text color if needed */
+            padding: 50px 0; /* Adjust padding as needed */
             text-align: center;
-            padding: 50px;
-            background-color: rgba(129, 40, 255, 0.5); 
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            background: inherit;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            filter: blur(5px); /* Adjust the pixel value to increase or decrease the blur */
+            z-index: -1;
         }
 
         .hero h1 {
@@ -231,7 +273,7 @@
         <nav class="navbar">
             <div class="logo">
                 <!-- Replace with your logo image -->
-                <img src="/img/bg1.jpg" alt="Logo" />
+                <img src="/img/Logo.jpg" alt="Logo" />
             </div>
             <div class="navbar-links">
                 <a href="#">Home</a>

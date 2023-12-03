@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hexo Homepage</title>
@@ -174,15 +175,34 @@
             color: #007bff; /* Highlight color on hover */
         }
 
+        .social-links {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
         .social-links a {
-            display: inline-block;
-            margin-right: 10px;
+            display: flex;
+            align-items: center;
             color: white;
+            margin-right: 15px;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:last-child {
+            margin-right: 0;
+        }
+
+        .social-links svg {
+            height: 24px;
+            width: auto;
+            margin-right: 8px;
+            fill: currentColor; /* SVG color will be the same as the text color */
         }
 
         .social-links a:hover {
-            color: #007bff; /* Highlight color on hover */
+            color: #007bff; /* Change icon color on hover */
         }
 
         .footer-bottom {
@@ -289,15 +309,23 @@
             <div class="footer-section">
                 <h4>Follow Us</h4>
                 <div class="social-links">
-                    <!-- Icons can be inserted here (SVG, images or icon fonts) -->
-                    <a href="#">Twitter</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
+                    <a href="https://github.com/OpenTeens" class="social-icon">
+                        <i class="fab fa-github"></i>
+                        Github
+                    </a>
+                    <a href="https://twitter.com/openteens_org" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                        Twitter
+                    </a>
+                    <a href="https://www.instagram.com/openteens_community/" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                    </a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2023 Your Company Name. All Rights Reserved.</p>
+            <p>&copy; OpenTeens. All Rights Reserved.</p>
         </div>
     </footer>
 </body>

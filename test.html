@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexo Homepage</title>
+    <style>
+        /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            height: 50px; /* Adjust as necessary */
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            transition: color 0.3s;
+        }
+
+        .navbar-links a:hover {
+            color: #007bff; /* Highlight color on hover */
+        }
+
+        .navbar-search {
+            display: flex;
+        }
+
+        .navbar-search input {
+            padding: 5px;
+            margin-right: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .navbar-search button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .navbar-search button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+
+        .hero h1 {
+            color: #333;
+            font-size: 2em;
+        }
+
+        .hero p {
+            color: #666;
+            font-size: 1em;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            padding: 0;
+        }
+
+        .card {
+            flex-basis: calc(33% - 40px); /* Subtracting the total margin from the width */
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Ensures nothing spills outside the border-radius */
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* Slight lift effect on hover */
+        }
+
+        .card-image {
+            width: 100%;
+            height: auto;
+            display: block; /* Remove any space below the image */
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            margin: 10px 0;
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        .card-description {
+            color: #666;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .card-link {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .card-link:hover {
+            background-color: #0056b3;
+        }
+
+        /* Add more styles as needed */
+        .site-footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            flex-wrap: wrap; /* Ensure it works on smaller screens */
+        }
+
+        .footer-section {
+            flex-basis: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .footer-links li a:hover {
+            color: #007bff; /* Highlight color on hover */
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #007bff; /* Highlight color on hover */
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                margin-bottom: 20px;
+            }
+        }
+            </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <!-- Replace with your logo image -->
+                <img src="/img/bg1.jpg" alt="Logo" />
+            </div>
+            <div class="navbar-links">
+                <a href="#">Home</a>
+                <!-- Add other links as necessary -->
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="navbar-search">
+                <input type="text" placeholder="Search" />
+                <button type="submit">🔍</button>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>主题自由切换</h1>
+            <p>一个简洁、美观的主题</p>
+            <!-- Featured image and call-to-action buttons go here -->
+        </section>
+        
+        <section class="cards">
+            <div class="card">
+                <img src="/img/bg1.jpg" alt="Card Image 1" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Card Title 1</h3>
+                    <p class="card-description">Description for card one. This is a brief introduction to the card's content.</p>
+                    <a href="#" class="card-link">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="/img/bg1.jpg" alt="Card Image 2" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Card Title 2</h3>
+                    <p class="card-description">Description for card two. This card contains different information or functionality.</p>
+                    <a href="#" class="card-link">Discover</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="/img/bg1.jpg" alt="Card Image 3" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Card Title 3</h3>
+                    <p class="card-description">Description for card three. It could have a call to action or further details.</p>
+                    <a href="#" class="card-link">Get Started</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Information about the company or website. This is a place to add some brief text or company philosophy.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>123 Business Ave, City, State, Zip</p>
+                <p>Email: contact@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <!-- Icons can be inserted here (SVG, images or icon fonts) -->
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Your Company Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

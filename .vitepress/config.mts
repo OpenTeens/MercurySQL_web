@@ -68,11 +68,11 @@ export default defineConfig({
       },
     ],
 
-    socialLinks: [{ icon: "github", link: "https://github.com/anzhiyu-c/hexo-theme-anzhiyu" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/BernieHuang2008/MercurySQL" }],
 
     algolia: {
-      appId: "CITURDDECN",
-      apiKey: "e5c83518b67da17a254574c31759596b",
+      appId: "MRUHRUYDDD",
+      apiKey: "b00081ef4943a1c8d937f20649632543",
       indexName: "anheyu",
       // searchParameters: {
       //   facetFilters: ["tags:en"],
@@ -124,11 +124,11 @@ export default defineConfig({
 
     footer: {
       message: `Released under the MIT License. (${commitRef})`,
-      copyright: "Copyright © 2023 AnZhiYu",
+      copyright: "Copyright © 2023 OpenTeens",
     },
 
     editLink: {
-      pattern: "https://github.com/anzhiyu-c/anzhiyu-docs/edit/main/:path",
+      pattern: "https://github.com/BernieHuang2008/MercurySQL/edit/main/:path",
       text: "Edit this page on GitHub",
     },
   },

@@ -16,9 +16,6 @@ hero:
     - theme: alt
       text: 简介
       link: /intro
-    - text: GitHub
-      link: https://github.com/BernieHuang2008/MercurySQL
-
   image:
         src: /cover2.webp
         alt: MercurySQL logo

@@ -55,18 +55,19 @@ export default defineConfig({
         items: [
           { text: "安装MercurySQL 💻", link: "/initall" },
           {
-            text: "快速入门 🚀",
-            collapsed: false,
-            items: [
-              { text: "占位符", link: "/advanced/" },
-            ],
-          },
-          {
             text: "常见问题 📖",
             link: "/FAQ",
           },
         ],
       },
+      {
+        text: "进阶开发手册 📝",
+        // collapsed: false,
+        items: [
+          { text: "API速查", link: "/advanced/API速查" },
+        ],
+      },
+
     ],
 
     socialLinks: [{ icon: "github", link: "https://github.com/BernieHuang2008/MercurySQL" }],

@@ -3,11 +3,11 @@
 layout: home
 
 title: MercurySQL 官方文档
-titleTemplate: 以更Pythonic的方式操作SQL
+titleTemplate: 以更Python的方式操作SQL数据库
 
 hero:
   name: "MercurySQL 官方文档"
-  text: "Pythonic SQL数据库操作"
+  text: "更 Python 地操作 SQL 数据库"
   tagline: 快速、简单、安全地操作SQL
   actions:
     - theme: brand
@@ -25,7 +25,7 @@ hero:
 
 features:
   - icon: 🚀
-    title: 更Pythonic的操作方式
+    title: 更Python的操作方式
     details: 提供与Python风格更一致的API，使SQL数据库操作更简洁易懂
   - icon: 😃
     title: 避免复杂SQL
@@ -41,5 +41,5 @@ features:
     details: 提供创建、删除表格、添加记录等功能
   - icon: ⚙️
     title: 无依赖
-    details: 仅依赖于Python自带的sqlite3，无需额外依赖
+    details: 仅依赖于Python自带的库（比如sqlite3），无额外依赖，**开箱即用**
 ---

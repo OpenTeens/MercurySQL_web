@@ -21,7 +21,7 @@ export default defineConfig({
   title: "MercurySQL 官方文档",
   description: "Pythonic SQL数据库操作",
   lang: "zh",
-  base: ".",
+  base: "/MercurySQL_web/",
   head: [
     ["link", { rel: "icon", type: "image/png", href: "/logo.png" }],
     ["meta", { property: "og:type", content: "website" }],

@@ -588,10 +588,10 @@ vite@^4.4.9:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitepress-plugin-tabs@^0.3.0:
-  version "0.3.0"
-  resolved "https://r.cnpmjs.org/vitepress-plugin-tabs/-/vitepress-plugin-tabs-0.3.0.tgz#659779ebac1f7ff18e770e9a93b883a28e86571a"
-  integrity sha512-3dKsBuP6PDzcFHgUtNCwwCs3bYoZduj7AcQkT9JfAKTRAKPCNmjiNInPT3IZ7AihL0SJNoQ3liz/e97z8oo+XA==
+vitepress-plugin-tabs@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/vitepress-plugin-tabs/-/vitepress-plugin-tabs-0.5.0.tgz#2b193a72ed36b9fcd63e3907d3044fe7b6cf3e4e"
+  integrity sha512-SIhFWwGsUkTByfc2b279ray/E0Jt8vDTsM1LiHxmCOBAEMmvzIBZSuYYT1DpdDTiS3SuJieBheJkYnwCq/yD9A==
 
 vitepress@1.0.0-rc.4:
   version "1.0.0-rc.4"

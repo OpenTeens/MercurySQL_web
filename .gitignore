@@ -21,6 +21,6 @@ TODOs.md
 .eslintcache
 
 .vitepress/cache
-.vitepress/*
+# .vitepress/*
 node_modules
 node_modules/*

@@ -1,3 +1,6 @@
 .vscode
 .vscode/
 .vscode/*
+.vitepress/*
+node_modules
+node_modules/*

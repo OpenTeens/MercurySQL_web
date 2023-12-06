@@ -43,7 +43,7 @@ export default defineConfig({
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [{ text: "Pypi", link: "https://pypi.org/project/MercurySQLite" }],
+    nav: [{ text: "PyPI", link: "https://pypi.org/project/MercurySQL" }],
 
     sidebar: [
       {
@@ -130,7 +130,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: "https://github.com/BernieHuang2008/MercurySQL/edit/main/:path",
+      pattern: "https://github.com/OpenTeens/MercurySQL_web/edit/main/:path",
       text: "Edit this page on GitHub",
     },
   },
